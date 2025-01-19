@@ -8,8 +8,8 @@ class AlunoController {
 
   async store(req, res) {
     try {
-      const aluno = Aluno.create(req.body);
-      return res.json(aluno);
+      const novoAluno = await Aluno.create(req.body);
+      return res.json(novoAluno);
     } catch (e) {
       return res.status(400).json({
         errors: e.errors.map((err) => err.message),
@@ -63,7 +63,7 @@ class AlunoController {
       };
 
       await aluno.destroy();
-      return aluno.json({
+      return res.json({
         apagado: true
       });
     } catch (e) {
@@ -91,7 +91,7 @@ class AlunoController {
         });
       };
 
-      const alunoAtualizado = aluno.update(req.body);
+      const alunoAtualizado = await aluno.update(req.body);
       return res.json(alunoAtualizado);
     } catch (e) {
       return res.status(400).json({
