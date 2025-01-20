@@ -1,14 +1,14 @@
-# API BIOSINCRONIZA
-
-Esta é a API para o BioSincroniza, ela é responsável pela comunicação com equipamentos de Registro de Ponto Eletronico(REP).
+# API ALUNOS
 
 ## Tecnologias Usadas
 
 - **Node.js**: Ambiente de execução JavaScript.
 - **Express**: Framework web para Node.js.
 - **NodeMon**: Ferramenta que ajuda no desenvolvimento, reiniciando a aplicação a cada alteração feita nos diretórios.
-- **Net**: Biblioteca nativa do NodeJS para conexões TCP.
-- **Crypto**: Biblioteca nativa do NodeJS para encriptação RSA; 
+- **bccryptjs**: Biblioteca para fazer o hash de senhas.
+- **jsonwebtoken**: Módulo para gerenciamento dos tokens de autênticação dos usuários;
+- **multer**: Middleware para upload e manipulação de arquivos.
+- **sequelize**: ORM NodeJs que utilizo junto do MySQL. 
 
 ## Configuração do Projeto
 
@@ -20,7 +20,7 @@ Esta é a API para o BioSincroniza, ela é responsável pela comunicação com e
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/seu-usuario/api-biosincroniza-nodejs.git
+   git clone https://github.com/seu-usuario/api-alunos.git
    cd api-biosincroniza-nodejs
 
 2. Instale as dependências:
@@ -30,11 +30,13 @@ Esta é a API para o BioSincroniza, ela é responsável pela comunicação com e
 3. Configure as variáveis de ambiente: 
    Crie um arquivo .env na raiz do projeto e adicione as seguintes variáveis:
    ```
-   PORT=8000
-   JAVA_API_ENCRYPTION_AES_URL=url da api de encriptação aes
-   JAVA_API_ENCRYPTION_AES_PORT=porta da api de encriptação aes
-   TCP_TIMEOUT=timeout conexão tcp
-   AES_KEY_SIZE=tamanho chave aes, (o padrão do projeto é 16)
+   DATABASE=nome do banco de dados
+   DATABASE_HOST=endereço do banco
+   DATABASE_PORT=porta do banco
+   DATABASE_USERNAME=usuário do banco
+   DATABASE_PASSWORD=senha do banco
+   TOKEN_SECRET=chave secreta do token
+   TOKEN_EXPIRATION=expiração do token
 
 5. Inicie o servidor:
    ```
