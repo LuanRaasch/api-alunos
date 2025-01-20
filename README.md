@@ -42,7 +42,7 @@
    ```
    npm run dev
 
-## Rotas da entidade Empresa
+## Rotas do User
 
 ### 1. `POST /conn`
 **Descrição:** Conecta uma nova empresa ao sistema.
@@ -122,5 +122,136 @@
 {
    "cnpj":"string",
    "idColetor":"string"  
+}
+```
+## Rotas do Token
+
+### 1. `POST /conn`
+**Descrição:** Conecta uma nova empresa ao sistema.
+
+**Corpo da Requisição:**
+```json
+{
+  "cnpj": "string"
+}
+```
+### 2. `POST /desc`
+**Descrição:** Remove uma empresa do sistema.
+
+**Corpo da Requisição:**
+```json
+{
+  "cnpj": "string"
+}
+```
+### 3. `GET /empConn`
+**Descrição:** Retorna uma lista de empresas conectadas.
+
+**Resposta:**
+
+**Código 200: Lista de empresas conectadas.**
+```json
+{
+  "cnpj": "string",
+  "equipamentos": []
+}
+```
+
+## Rotas do Aluno
+
+### 1. `POST /conn`
+**Descrição:** Conecta uma nova empresa ao sistema.
+
+**Corpo da Requisição:**
+```json
+{
+  "cnpj": "string"
+}
+```
+### 2. `POST /desc`
+**Descrição:** Remove uma empresa do sistema.
+
+**Corpo da Requisição:**
+```json
+{
+  "cnpj": "string"
+}
+```
+### 3. `GET /empConn`
+**Descrição:** Retorna uma lista de empresas conectadas.
+
+**Resposta:**
+
+**Código 200: Lista de empresas conectadas.**
+```json
+{
+  "cnpj": "string",
+  "equipamentos": []
+}
+```
+
+## Rotas da Foto
+
+### 1. `POST /conn`
+**Descrição:** Conecta uma nova empresa ao sistema.
+
+**Corpo da Requisição:**
+```json
+{
+  "cnpj": "string"
+}
+```
+### 2. `POST /desc`
+**Descrição:** Remove uma empresa do sistema.
+
+**Corpo da Requisição:**
+```json
+{
+  "cnpj": "string"
+}
+```
+### 3. `GET /empConn`
+**Descrição:** Retorna uma lista de empresas conectadas.
+
+**Resposta:**
+
+**Código 200: Lista de empresas conectadas.**
+```json
+{
+  "cnpj": "string",
+  "equipamentos": []
+}
+```
+
+## Rotas da Home
+
+### 1. `POST /conn`
+**Descrição:** Conecta uma nova empresa ao sistema.
+
+**Corpo da Requisição:**
+```json
+{
+  "cnpj": "string"
+}
+```
+### 2. `POST /desc`
+**Descrição:** Remove uma empresa do sistema.
+
+**Corpo da Requisição:**
+```json
+{
+  "cnpj": "string"
+}
+```
+### 3. `GET /empConn`
+**Descrição:** Retorna uma lista de empresas conectadas.
+
+**Resposta:**
+
+**Código 200: Lista de empresas conectadas.**
+```json
+{
+  "cnpj": "string",
+  "equipamentos": []
 }
 ```
