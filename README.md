@@ -44,26 +44,30 @@
 
 ## Rotas do User
 
-### 1. `POST /conn`
-**Descrição:** Conecta uma nova empresa ao sistema.
+### 1. `POST /users/`
+**Descrição:** Novo usuário.
 
 **Corpo da Requisição:**
 ```json
 {
-  "cnpj": "string"
+  "nome": "Luan",
+  "email": "luan@gmail.com"
+  "password": 123456
 }
 ```
-### 2. `POST /desc`
-**Descrição:** Remove uma empresa do sistema.
+### 2. `PUT /users/`
+**Descrição:** Atualiza um usuário.
 
 **Corpo da Requisição:**
 ```json
 {
-  "cnpj": "string"
+  "nome": "Luan",
+  "email": "luan@gmail.com"
+  "password": 123456
 }
 ```
-### 3. `GET /empConn`
-**Descrição:** Retorna uma lista de empresas conectadas.
+### 3. `DELETE /users/`
+**Descrição:** Deleta um usuário.
 
 **Resposta:**
 
